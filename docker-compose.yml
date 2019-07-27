@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  # DISCOVERY SERVICE
+  discovery:
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - 8761:8761
+
+  # SERVICES
+  forum:
+    build:
+      context: ./forum
+      dockerfile: Dockerfile
+    ports:
+      - 8082:8082
+    depends_on:
+      - discovery
+
+  points:
+    build:
+      context: ./point-system
+      dockerfile: Dockerfile
+    ports:
+      - 8083:8083
+    depends_on:
+      - discovery
+  
+  search:
+    build:
+      context: ./search
+      dockerfile: Dockerfile
+    ports:
+      - 8084:8084
+    depends_on:
+      - discovery
+
+  user:
+    build:
+      context: ./user-interaction
+      dockerfile: Dockerfile
+    ports:
+      - 8085:8085
+    depends_on:
+      - discovery
+    
+

@@ -1,0 +1,15 @@
+[submodule "user-interaction"]
+	path = user-interaction
+	url = https://github.com/fcgl/user-interaction.git
+[submodule "eureka-server"]
+	path = eureka-server
+	url = https://github.com/fcgl/eureka-server.git
+[submodule "search"]
+	path = search
+	url = https://github.com/fcgl/search.git
+[submodule "point-system"]
+	path = point-system
+	url = https://github.com/fcgl/point-system.git
+[submodule "forum"]
+	path = forum
+	url = https://github.com/fcgl/forum.git
