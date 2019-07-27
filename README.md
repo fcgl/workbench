@@ -12,7 +12,8 @@ Runs the entire application with all the microservices
 ## Test
 1. Go to http://localhost:8761/ (might take a little while before this port is open for business)
 2. If the following instances are registered with eureka then you have a successful build
-    * FORUM-SERVICE
-    * POINT-SERVICE
-    * SEARCH-SERVICE
-    * USER-SERVICE
+    * FORUM-SERVICE: http://localhost:8082/health/v1/marco
+    * POINT-SERVICE: http://localhost:8083/health/v1/marco
+    * SEARCH-SERVICE: http://localhost:8084/health/v1/marco
+    * USER-SERVICE: http://localhost:8085/health/v1/marco
+
